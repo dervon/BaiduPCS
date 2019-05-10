@@ -8,12 +8,13 @@ extern "C" {
 typedef struct pcs_buf_t pcs_buf_t;
 
 struct pcs_buf_t {
-	char *data;
-	int len;
-	int size;
+  char *data;
+  int len;
+  int size;
 };
 
-#define PCS_BUF_INIT() { 0 }
+#define PCS_BUF_INIT() \
+  { 0 }
 
 int pcs_buf_init(pcs_buf_t *buf);
 

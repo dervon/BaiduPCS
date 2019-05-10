@@ -4,23 +4,24 @@
 #include "hashtable.h"
 
 /*参数对象*/
-struct args
-{
-	char		*name;
-	char		*cmd;
-	Hashtable	*opts;
-	int			optc;
-	char		**argv;
-	int			argc;
+struct args {
+  char *name;
+  char *cmd;
+  Hashtable *opts;
+  int optc;
+  char **argv;
+  int argc;
 };
 
 /*解析参数*/
-int parse_arg(struct args *arg, int argc, char *argv[], char *(*utf8)(const char *s));
+int parse_arg(struct args *arg, int argc, char *argv[],
+              char *(*utf8)(const char *s));
 void free_args(struct args *arg);
 /*
 删除一个选项。
 删除成功返回0，否则返回非0值。
-执行成功，且 pValue不为NULL，则把被删除项的值写入 (*pValue)。注意值需要调用pcs_free()
+执行成功，且 pValue不为NULL，则把被删除项的值写入
+(*pValue)。注意值需要调用pcs_free()
 */
 int remove_opt(struct args *arg, const char *opt, char **pValue);
 
@@ -87,6 +88,5 @@ maxArgc - 允许的最多参数
   }
 */
 int test_arg(struct args *arg, int minArgc, int maxArgc, ...);
-
 
 #endif

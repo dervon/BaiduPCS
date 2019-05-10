@@ -3,18 +3,18 @@
 
 /*网盘API返回数据格式*/
 typedef struct PcsPanApiResInfo {
-	char	*path;
-	int		error;
+  char *path;
+  int error;
 } PcsPanApiResInfo;
 
 typedef struct PcsPanApiResInfoList {
-	PcsPanApiResInfo			info;
-	struct PcsPanApiResInfoList	*next;
+  PcsPanApiResInfo info;
+  struct PcsPanApiResInfoList *next;
 } PcsPanApiResInfoList;
 
 typedef struct PcsPanApiRes {
-	int						error;
-	PcsPanApiResInfoList	*info_list;
+  int error;
+  PcsPanApiResInfoList *info_list;
 } PcsPanApiRes;
 
 PCS_API const char *pcs_pan_api_res_info_errmsg(int error);
