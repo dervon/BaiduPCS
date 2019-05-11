@@ -3,6 +3,9 @@
 
 #ifndef _PCS_SHELL_DIR_H_
 #define _PCS_SHELL_DIR_H_
+#ifndef _PCS_MEM_H
+#include "pcs/pcs_mem.h"
+#endif  // !_PCS_MEM_H
 
 #define DEFAULT_MKDIR_ACCESS 0750 /*创建目录时默认权限，只有非Windows系统使用*/
 

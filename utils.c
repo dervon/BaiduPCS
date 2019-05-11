@@ -6,9 +6,11 @@
 #include <time.h>
 
 #ifdef WIN32
-#include <Shlwapi.h>
 #include <WinSock2.h>
 #include <Windows.h>
+#ifdef _WINSOCK2API_
+#include <Shlwapi.h>
+#endif  // !_WINSOCK2API_
 #include <conio.h>
 #include <direct.h>
 
